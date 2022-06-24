@@ -1,7 +1,15 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  const setNumbers = {};
+
+  for(const number of array){
+    const total = target - number;
+    if (total in setNumbers) return true
+    setNumbers[number] = true
+  }
+  return false
 }
 
+//wtite a function with two arguments. For of loop to get two numbers in array to hit target number
 /* 
   Write the Big O time complexity of your function here
 */
